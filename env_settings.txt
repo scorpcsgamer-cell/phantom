@@ -1,0 +1,78 @@
+# ═══════════════════════════════════════════════════════
+# PHANTOM v1.0 — Configuration
+# ═══════════════════════════════════════════════════════
+
+# ── OKX API ────────────────────────────────────────────
+# Создание ключа: https://www.okx.com/account/my-api
+# 1. Profile → API → Create V5 API Key
+# 2. Permissions: ☑ Read + ☑ Trade (БЕЗ Withdraw!)
+# 3. Passphrase придумываете сами при создании
+OKX_API_KEY=ВАШ_API_KEY_ЗДЕСЬ
+OKX_API_SECRET=ВАШ_API_SECRET_ЗДЕСЬ
+OKX_PASSPHRASE=ВАШ_PASSPHRASE_ЗДЕСЬ
+OKX_TESTNET=true
+
+# ── Risk Management ────────────────────────────────────
+RISK_PER_TRADE=1.0
+MAX_DAILY_LOSS=5.0
+MAX_DRAWDOWN_STOP=15.0
+LEVERAGE=5
+MAX_POSITIONS=10
+SL_PCT=3.0
+TP_PCT=6.0
+TRAIL_PCT=2.0
+COOLDOWN_AFTER_SL=30
+
+# ── Signals ────────────────────────────────────────────
+SIGNAL_CONFIDENCE=68.0
+STRATEGY=trend
+
+# ── Scanner ────────────────────────────────────────────
+SCAN_INTERVAL=30
+MIN_VOLUME_USDT=3000000
+MIN_ATR_PCT=1.0
+
+# ── Persistence ────────────────────────────────────────
+AUTO_RESTORE=true
+PERSIST_INTERVAL_S=30
+RECONCILE_INTERVAL_S=300
+
+# ── Network Safety ─────────────────────────────────────
+PANIC_CLOSE_AFTER_S=600
+
+# ── Funding & Slippage ─────────────────────────────────
+AVOID_FUNDING_MIN=5
+SLIPPAGE_PCT=0.05
+
+# ── WebSocket ──────────────────────────────────────────
+USE_WEBSOCKET=true
+
+# ── Position Mode ──────────────────────────────────────
+REQUIRE_ONE_WAY_MODE=true
+AUTO_SWITCH_POSITION_MODE=false
+
+# ── Liquidation Monitor ────────────────────────────────
+LIQ_CRITICAL_PCT=30.0
+LIQ_EMERGENCY_PCT=15.0
+LIQ_CHECK_INTERVAL_S=60
+AUTO_RESTORE_SL_TP=false
+
+# ── Order Health ───────────────────────────────────────
+ORDER_HEALTH_THRESHOLD=5
+ORDER_HEALTH_WINDOW_S=60
+ORDER_HEALTH_PAUSE_S=300
+
+# ── Telegram Alerts ────────────────────────────────────
+# Создайте бота через @BotFather, получите токен
+# Свой chat_id узнайте через @userinfobot
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
+TELEGRAM_ENABLED=false
+DAILY_SUMMARY_HOUR_UTC=0
+
+# ── Partial Take-Profit ────────────────────────────────
+ENABLE_PARTIAL_TP=false
+TP_LEVELS=3:50,6:30,10:20
+MOVE_SL_TO_BE_AFTER_TP1=true
+TRAIL_AFTER_LAST_TP=true
+TRAIL_PCT_AFTER_ALL_TP=1.5
